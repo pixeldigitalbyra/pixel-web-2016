@@ -1,0 +1,8 @@
+{
+  "name": "pixel-web-2016",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "foundation": "~5.5.3"
+  }
+}
