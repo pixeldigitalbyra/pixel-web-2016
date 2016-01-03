@@ -8,11 +8,13 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   filter = require('gulp-filter'),
   project = require("./project.json"),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  livereload = require('gulp-livereload');
 
 var paths = {
   webroot: "./wwwroot/",
-  bowerComponents: "./bower_components/"
+  bowerComponents: "./bower_components/",
+  cshtml: "./Views/**/*.cshtml"
 };
 
 paths.js = paths.webroot + "js/**/*.js";
@@ -67,16 +69,23 @@ gulp.task("min", ["min:js", "min:css"]);
 // === SASS ===
 gulp.task("sass:site", function () {
   gulp.src("./scss/site.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest(paths.webroot + "css"));
+    .pipe(sass({includePaths: "bower_components/foundation-sites/scss"}).on("error", sass.logError))
+    .pipe(gulp.dest(paths.webroot + "css"))
+    .pipe(livereload());
 });
 gulp.task("sass:foundation", function () {
-  gulp.src("./scss/foundation-custom.scss")
-    .pipe(sass({includePaths: "bower_components/foundation/scss/"}).on("error", sass.logError))
-    .pipe(gulp.dest(paths.webroot + "css"));
+  gulp.src("./scss/foundation-sites-custom.scss")
+    .pipe(sass({includePaths: "bower_components/foundation-sites/scss"}).on("error", sass.logError))
+    .pipe(gulp.dest(paths.webroot + "css"))
+    .pipe(livereload());
 });
  
-gulp.task("sass:watch", function () {
+gulp.task("watch", function () {
+  livereload.listen({quiet: true});
   gulp.watch(paths.scss, ["sass:site"]);
-  gulp.watch(["./scss/foundation-custom.scss", "./scss/partials/_foundation-settings.scss"], ["sass:foundation"]);
+  gulp.watch(["./scss/foundation-sites-custom.scss", "./scss/partials/_foundation-sites-settings.scss"], ["sass:foundation"]);
+  gulp.watch(paths.cshtml, function () { 
+      gulp.src(paths.cshtml)
+        .pipe(livereload());
+  });
 });

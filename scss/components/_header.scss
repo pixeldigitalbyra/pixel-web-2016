@@ -1,0 +1,17 @@
+@import "../partials/foundation-sites-settings";
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    
+    .top-bar {
+        transition: background-color .5s ease-in-out;
+    }
+}
+
+body.has-scrolled {
+    .top-bar {
+        background-color: $white;
+    }
+}

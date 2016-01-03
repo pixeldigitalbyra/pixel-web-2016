@@ -5,12 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pixel Digitalbyrå</title>
         
-        <link rel="stylesheet" href="~/css/foundation-custom.css" />
+        <link rel="stylesheet" href="~/css/foundation-sites-custom.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </head>
     <body>
+        <header>
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <li class="menu-text">Pixel Digitalbyrå</li>                    
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li><a href="#">Kontakta oss</a></li>                    
+                    </ul>
+                </div>
+            </div>
+        </header>
         @RenderBody()
-        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery/jquery.js"></script>
         @RenderSection("scripts", required: false)
     </body>
 </html>

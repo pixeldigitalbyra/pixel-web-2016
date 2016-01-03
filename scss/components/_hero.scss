@@ -1,0 +1,62 @@
+@import "../partials/foundation-sites-settings";
+
+.hero {
+    position: relative;
+    min-height: 90vh;
+    background-size: cover;
+    background-image: url("/images/baltic-sea-360283.jpg");
+    background-position: center center;
+    color: $white;
+    
+    .content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    
+    .we-are {
+        padding-top: 20vh;
+        font-size: rem-calc(24);
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .pixel {
+        font-size: rem-calc(100);
+        line-height: 1.1;
+        text-align: center;
+    }
+    
+    .functional {
+        font-size: rem-calc(24);
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+        margin-top: rem-calc(50);
+    }
+    
+    .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+}
+
+body.has-scrolled {
+    .hero {
+        .functional {
+            opacity: 1;
+        }
+
+        .overlay {
+            opacity: 0.7;
+        }
+    }
+}
+ 
