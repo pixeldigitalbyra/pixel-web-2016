@@ -23,7 +23,35 @@
                 </div>
             </div>
         </header>
+        
         @RenderBody()
+        
+        <footer class="block">
+            <div class="row">
+                <div class="small-12 medium-6 columns">
+                    <p>Pixel Digitalbyr i Halmstad AB</p>
+                    <p>0702-19 53 30</p>
+                    <p>info@pixeldigitalbyra.se</p>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <h3>Kontakta oss</h3>
+                    <form>
+                        <div class="row">
+                            <div class="medium-6 columns">
+                                <label>Input Label
+                                    <input type="text" placeholder=".medium-6.columns">
+                                </label>
+                            </div>
+                            <div class="medium-6 columns">
+                                <label>Input Label
+                                    <input type="text" placeholder=".medium-6.columns">
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </footer>
         <script src="~/lib/jquery/jquery.js"></script>
         @RenderSection("scripts", required: false)
     </body>

@@ -8,6 +8,9 @@ header {
 body.has-scrolled .top-bar {
   background-color: #fefefe; }
 
+footer {
+  background-color: #8a8a8a; }
+
 .hero {
   position: relative;
   min-height: 90vh;
@@ -51,6 +54,7 @@ body.has-scrolled .hero .functional {
 body.has-scrolled .hero .overlay {
   opacity: 0.7; }
 
-.block.about {
-  margin-top: 5rem;
-  margin-bottom: 5rem; }
+.block {
+  padding: 5rem 0; }
+  .block.why {
+    background-color: #e6e6e6; }

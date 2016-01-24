@@ -1,0 +1,12 @@
+@import "../partials/foundation-sites-settings";
+ 
+.block {
+    padding: rem-calc(80 0);
+  
+    &.about {
+    }
+
+    &.why {
+        background-color: $light-gray;
+    }
+}
