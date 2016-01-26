@@ -1,60 +1,89 @@
 header {
-  position: fixed;
-  width: 100%;
-  z-index: 10; }
-  header .top-bar {
-    transition: background-color .5s ease-in-out; }
-
-body.has-scrolled .top-bar {
-  background-color: #fefefe; }
+  padding-top: 1.15385rem;
+  font-family: 'Slabo 13px', serif;
+  font-size: 1rem;
+  line-height: 1.53846rem; }
+  @media screen and (min-width: 40em) {
+    header {
+      font-family: 'Slabo 27px', serif;
+      font-size: 2.07692rem;
+      line-height: 3.07692rem; } }
+  header a {
+    color: #fff; }
+    header a:hover {
+      color: #ffae00; }
+  header .brand {
+    text-transform: uppercase; }
+  header .contact-us {
+    position: relative; }
+    header .contact-us .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+      position: absolute;
+      top: 0.15385rem;
+      left: -1.38462rem; }
+      @media screen and (min-width: 40em) {
+        header .contact-us .icon {
+          top: 0.46154rem;
+          left: -2.76923rem; } }
 
 footer {
-  background-color: #8a8a8a; }
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1.15385rem;
+  width: 100%; }
+  footer ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center; }
+  @media screen and (min-width: 40em) {
+    footer ul {
+      padding: 0;
+      list-style-type: none;
+      margin: 0; }
+      footer ul::before, footer ul::after {
+        content: ' ';
+        display: table; }
+      footer ul::after {
+        clear: both; }
+      footer ul li {
+        float: left;
+        margin-left: 1.53846rem; }
+        footer ul li:first-child {
+          margin-left: 0; } }
 
-.hero {
-  position: relative;
-  min-height: 90vh;
+body.first-page {
+  background-image: url("/images/forest-1031022-1920x1200.jpg");
   background-size: cover;
-  background-image: url("/images/baltic-sea-360283.jpg");
   background-position: center center;
-  color: #fefefe; }
-  .hero .content {
+  color: #fff; }
+  body.first-page .splash-wrapper {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0; }
-  .hero .we-are {
-    padding-top: 20vh;
-    font-size: 1.5rem;
-    line-height: 1;
+    top: 20%;
+    width: 100%; }
+    @media screen and (min-width: 40em) {
+      body.first-page .splash-wrapper {
+        top: 25%; } }
+  body.first-page .splash {
+    max-width: 61.53846rem;
     text-align: center; }
-  .hero .pixel {
-    font-size: 6.25rem;
-    line-height: 1.1;
-    text-align: center; }
-  .hero .functional {
-    font-size: 1.5rem;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-    margin-top: 3.125rem; }
-  .hero .overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #000;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; }
-
-body.has-scrolled .hero .functional {
-  opacity: 1; }
-
-body.has-scrolled .hero .overlay {
-  opacity: 0.7; }
-
-.block {
-  padding: 5rem 0; }
-  .block.why {
-    background-color: #e6e6e6; }
+    body.first-page .splash h1 {
+      font-size: 2.07692rem;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+      margin-bottom: 0.92308rem; }
+    body.first-page .splash p {
+      font-size: 1rem;
+      font-family: 'Slabo 13px', serif;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+      margin-bottom: 2.07692rem; }
+    body.first-page .splash .button {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4); }
+    @media screen and (min-width: 40em) {
+      body.first-page .splash h1 {
+        font-size: 4.15385rem; }
+      body.first-page .splash p {
+        font-size: 2.07692rem;
+        font-family: 'Slabo 27px', serif; } }

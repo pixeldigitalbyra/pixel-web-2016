@@ -1,0 +1,21 @@
+@mixin inline-list {
+    @include clearfix;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    
+    li {
+        float: left;
+        margin-left: rem-calc(20);
+        
+        &:first-child {
+            margin-left: 0;
+        }
+    }        
+}
+
+@mixin undecorated-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}

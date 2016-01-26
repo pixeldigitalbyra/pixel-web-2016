@@ -1,17 +1,45 @@
 @import "../partials/foundation-sites-settings";
 
 header {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    
-    .top-bar {
-        transition: background-color .5s ease-in-out;
-    }
-}
+    padding-top: rem-calc(15);
+    font-family: 'Slabo 13px', serif;;
+    font-size: rem-calc(13);
+    line-height: rem-calc(20);
 
-body.has-scrolled {
-    .top-bar {
-        background-color: $white;
+    @media #{$medium-up} {
+        font-family: 'Slabo 27px', serif;;
+        font-size: rem-calc(27);
+        line-height: rem-calc(40);
+    }
+    
+    a {
+        color: #fff;
+        
+        &:hover {
+            color: $warning-color;
+        }
+    }
+    
+    .brand {
+        text-transform: uppercase;
+    }
+    
+    .contact-us {
+        position: relative;
+        
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            position: absolute;
+            top: rem-calc(2);
+            left: rem-calc(-18);
+
+            @media #{$medium-up} {
+                top: rem-calc(6);
+                left: rem-calc(-36);
+            }
+        }
     }
 }

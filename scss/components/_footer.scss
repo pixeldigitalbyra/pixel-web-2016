@@ -1,5 +1,20 @@
 @import "../partials/foundation-sites-settings";
+@import "../partials/mixins";
 
 footer {
-    background-color: $dark-gray;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: rem-calc(15);
+    width: 100%;
+    
+    ul {
+        @include undecorated-list;
+        text-align: center;
+    }
+    
+    @media #{$medium-up} {
+        ul {
+            @include inline-list;
+        }
+    }
 }
