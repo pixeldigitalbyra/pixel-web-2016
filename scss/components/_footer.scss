@@ -1,20 +1,30 @@
+@import "../../bower_components/foundation-sites/scss/util/breakpoint";
 @import "../partials/foundation-sites-settings";
 @import "../partials/mixins";
 
 footer {
-    position: absolute;
-    bottom: 0;
+    padding-top: rem-calc(15);
     padding-bottom: rem-calc(15);
     width: 100%;
+    color: #fff;
+    background-color: $black;
     
     ul {
         @include undecorated-list;
         text-align: center;
     }
     
-    @media #{$medium-up} {
+    @include breakpoint(medium up) {
         ul {
             @include inline-list;
         }
+    }
+}
+
+.first-page {
+    footer {
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
     }
 }

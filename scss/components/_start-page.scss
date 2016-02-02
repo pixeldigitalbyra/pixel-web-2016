@@ -1,0 +1,66 @@
+@import "../../bower_components/foundation-sites/scss/util/breakpoint";
+@import "../../bower_components/foundation-sites/scss/components/button";
+
+.page.start-page {
+    .hero-wrapper {
+        height: 100vh;
+        background-image: url("/images/forest-1031022-1920x1200.jpg");
+        background-size: cover;
+        background-position: center center;
+        padding-top: 20vh;
+
+        @include breakpoint(medium up) {
+            padding-top: 25vh;
+        }
+
+        .hero {
+            max-width: rem-calc(800);
+            text-align: center;
+            color: #fff;
+
+            $hero-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+
+            h1 {
+                text-shadow: $hero-shadow;
+                margin-bottom: rem-calc(27-15);
+            }
+
+            p {
+                text-shadow: $hero-shadow;
+                margin-bottom: rem-calc(27);
+            }
+
+            a {
+                @include button(false, $white, $white, $white, "hollow");
+
+                &:hover, &:focus {
+                    color: $warning-color;
+                    border-color: $warning-color;
+                }
+            }
+        }
+    }
+
+    section {
+        padding-top: rem-calc(100);
+        padding-bottom: rem-calc(100);
+
+        &.gray {
+            background-color: $light-gray;
+        }
+    }
+
+    .who-are-we {
+        .row:not(:first-child) {
+            margin-top: rem-calc(100);
+        }
+
+        img {
+            border-radius: 50%;
+            max-width: rem-calc(300);
+        }
+    }
+
+    .how-we-do-it {
+    }
+}

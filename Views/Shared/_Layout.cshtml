@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pixel Digitalbyrå</title>
-        
-        <link href='https://fonts.googleapis.com/css?family=Slabo+13px|Slabo+27px' rel='stylesheet' type='text/css'>
+
+        @*<link href='https://fonts.googleapis.com/css?family=Slabo+13px|Slabo+27px' rel='stylesheet' type='text/css'>*@
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="~/css/foundation-sites-custom.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -15,35 +16,41 @@
             </symbol>
         </svg>
     </head>
-    <body class="first-page">
-        <header>
-            <div class="row">
-                <div class="small-12 columns clearfix">
-                    <div class="brand float-left">Pixel Digitalbyrå</div>
-                    <div class="contact-us float-right">
-                        <a href="#">
-                            <svg class="icon icon-bubble2"><use xlink:href="#icon-bubble2"></use></svg>
-                            <span>Kontakta oss</span>
-                        </a>
-                    </div>
+<body>
+    <header>
+        <div class="row">
+            <div class="small-12 columns clearfix">
+                <div class="brand float-left">Pixel Digitalbyrå</div>
+                <div class="contact-us float-right">
+                    <a href="#">
+                        <svg class="icon icon-bubble2"><use xlink:href="#icon-bubble2"></use></svg>
+                        <span>Kontakta oss</span>
+                    </a>
                 </div>
-            </div>                    
-        </header>
-        
-        @RenderBody()
-        
-        <footer>
-            <div class="row">
-                <div class="small-12 columns">
-                    <ul>
-                        <li>Pixel Digitalbyrå i Halmstad AB</li>
-                        <li>0702-19 53 30</li>
-                        <li>info@pixeldigitalbyra.se</li>
-                    </ul>
-                </div>
-            </div>    
-        </footer>
-        <script src="~/lib/jquery/jquery.js"></script>
-        @RenderSection("scripts", required: false)
-    </body>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="row">
+            <div class="small-12 columns">
+                <ul>
+                    <li>Pixel Digitalbyrå i Halmstad AB</li>
+                    <li>0702-19 53 30</li>
+                    <li>info@pixeldigitalbyra.se</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/js/base-page.js"></script>
+    <script>
+        window.pixel.basePage.init();
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+
 </html>

@@ -1,32 +1,38 @@
+@import "../../bower_components/foundation-sites/scss/util/breakpoint";
 @import "../partials/foundation-sites-settings";
 
 header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
     padding-top: rem-calc(15);
-    font-family: 'Slabo 13px', serif;;
-    font-size: rem-calc(13);
+    padding-bottom: rem-calc(15);
     line-height: rem-calc(20);
+    color: #fff;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 
-    @media #{$medium-up} {
-        font-family: 'Slabo 27px', serif;;
-        font-size: rem-calc(27);
+    @include breakpoint(medium up) {
         line-height: rem-calc(40);
     }
-    
+
     a {
         color: #fff;
-        
+
         &:hover {
             color: $warning-color;
         }
     }
-    
+
     .brand {
         text-transform: uppercase;
     }
-    
+
     .contact-us {
         position: relative;
-        
+
         .icon {
             display: inline-block;
             width: 1em;
@@ -36,10 +42,17 @@ header {
             top: rem-calc(2);
             left: rem-calc(-18);
 
-            @media #{$medium-up} {
+            @include breakpoint(medium up) {
                 top: rem-calc(6);
                 left: rem-calc(-36);
             }
         }
+    }
+}
+
+.has-scrolled {
+    header {
+        background-color: $black;
+        opacity: 0.7;
     }
 }
