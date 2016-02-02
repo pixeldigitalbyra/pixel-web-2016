@@ -90,20 +90,28 @@
             </div>
             <div class="small-12 medium-6 column">
                 <p><strong>Eller fyll i formuläret:</strong></p>
-                <form>
+                <div id="contactSuccessMessage" class="callout success hide">
+                    <p>Tack för ditt intresse, vi hör av oss så fort vi kan!</p>
+                    <p>Mvh <br/>Pixel Digitalbyrå</p>
+                </div>
+                <div id="contactFailMessage" class="callout alert hide">
+                    <p>Hmmm, meddelandet kunde inte skickas, prova att nå oss på telefon eller mejl istället.</p>
+                    <p>Mvh <br />Pixel Digitalbyrå</p>
+                </div>
+                <form id="contactForm">
                     <label>
                         Ditt namn
-                        <input type="text">
+                        <input type="text" id="txtName">
                     </label>
                     <label>
                         Ditt telefonnummer / e-postadress
-                        <input type="text">
+                        <input type="text" id="txtContactInformation">
                     </label>
                     <label>
                         Vad kan vi hjälpa dig med?
-                        <textarea rows="3"></textarea>
+                        <textarea rows="3" id="txtMessage"></textarea>
                     </label>
-                    <input type="submit" class="button warning"/>
+                    <input type="submit" id="btnSubmitContactForm" class="button warning"/>
                 </form>
             </div>
         </div>
