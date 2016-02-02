@@ -1,4 +1,6 @@
-﻿a.with-icon {
+﻿@import "../../bower_components/foundation-sites/scss/util/breakpoint";
+
+a.with-icon {
     position: relative;
     -moz-transition: color 0.25s ease-out;
     -o-transition: color 0.25s ease-out;
@@ -18,4 +20,10 @@
         height: 1.5em;
         fill: currentColor;
     }
+}
+
+.row {
+     @include breakpoint(medium only) {
+         max-width: rem-calc(700);
+     }
 }

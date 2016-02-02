@@ -6,8 +6,8 @@ footer {
     padding-top: rem-calc(15);
     padding-bottom: rem-calc(15);
     width: 100%;
-    color: #fff;
-    background-color: $black;
+    color: $white;
+    background-color: $very-dark-gray;
     
     ul {
         @include undecorated-list;

@@ -5,8 +5,8 @@ header {
     position: fixed;
     z-index: 10;
     width: 100%;
-    padding-top: rem-calc(15);
-    padding-bottom: rem-calc(15);
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
     line-height: rem-calc(20);
     color: #fff;
     -moz-transition: background-color 0.5s ease;
@@ -16,10 +16,30 @@ header {
 
     @include breakpoint(medium up) {
         line-height: rem-calc(40);
+        padding-top: rem-calc(15);
+        padding-bottom: rem-calc(15);
     }
 
     a {
         color: #fff;
+
+        span {
+            display: none;
+        }
+
+        .icon {
+            position: relative !important;
+        }
+
+        @include breakpoint(medium up) {
+            span {
+                display: inline-block;
+            }
+
+            .icon {
+                position: absolute !important;
+            }
+        }
 
         &:hover, &:focus {
             color: $warning-color;

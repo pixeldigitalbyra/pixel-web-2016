@@ -15,12 +15,16 @@ a.with-icon {
     height: 1.5em;
     fill: currentColor; }
 
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .row {
+    max-width: 43.75rem; } }
+
 header {
   position: fixed;
   z-index: 10;
   width: 100%;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
   line-height: 1.25rem;
   color: #fff;
   -moz-transition: background-color 0.5s ease;
@@ -29,9 +33,20 @@ header {
   transition: background-color 0.5s ease; }
   @media screen and (min-width: 40em) {
     header {
-      line-height: 2.5rem; } }
+      line-height: 2.5rem;
+      padding-top: 0.9375rem;
+      padding-bottom: 0.9375rem; } }
   header a {
     color: #fff; }
+    header a span {
+      display: none; }
+    header a .icon {
+      position: relative !important; }
+    @media screen and (min-width: 40em) {
+      header a span {
+        display: inline-block; }
+      header a .icon {
+        position: absolute !important; } }
     header a:hover, header a:focus {
       color: #ffae00; }
   header .brand {
@@ -45,8 +60,8 @@ footer {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
   width: 100%;
-  color: #fff;
-  background-color: #0a0a0a; }
+  color: #fefefe;
+  background-color: #333; }
   footer ul {
     padding: 0;
     margin: 0;
@@ -83,7 +98,7 @@ footer {
     .page.start-page .hero-wrapper {
       padding-top: 25vh; } }
   .page.start-page .hero-wrapper .hero {
-    max-width: 50rem;
+    max-width: 43.75rem;
     text-align: center;
     color: #fff; }
     .page.start-page .hero-wrapper .hero h1 {
@@ -120,17 +135,36 @@ footer {
         border-color: #ffae00; }
 
 .page.start-page section {
-  padding-top: 6.25rem;
-  padding-bottom: 6.25rem; }
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .page.start-page section {
+      padding-top: 4.6875rem;
+      padding-bottom: 4.6875rem; } }
+  @media screen and (min-width: 64em) {
+    .page.start-page section {
+      padding-top: 6.25rem;
+      padding-bottom: 6.25rem; } }
   .page.start-page section.gray {
     background-color: #f8f8f8; }
 
 .page.start-page .who-are-we .row:not(:first-child) {
-  margin-top: 6.25rem; }
+  margin-top: 3.125rem; }
+  @media screen and (min-width: 40em) {
+    .page.start-page .who-are-we .row:not(:first-child) {
+      margin-top: 6.25rem; } }
 
 .page.start-page .who-are-we img {
   border-radius: 50%;
-  max-width: 18.75rem; }
+  max-width: 12.5rem;
+  margin-bottom: 1.875rem; }
+  @media screen and (min-width: 40em) {
+    .page.start-page .who-are-we img {
+      max-width: 18.75rem;
+      margin-bottom: 3.125rem; } }
+  @media screen and (min-width: 64em) {
+    .page.start-page .who-are-we img {
+      margin-bottom: 0; } }
 
 .page.start-page .who-are-we a {
   color: #0a0a0a; }
