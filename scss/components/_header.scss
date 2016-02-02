@@ -41,7 +41,11 @@ header {
             }
         }
 
-        &:hover, &:focus {
+        &:focus {
+            color: $white;
+        }
+
+        &:hover {
             color: $warning-color;
         }
     }

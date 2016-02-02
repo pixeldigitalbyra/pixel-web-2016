@@ -81,6 +81,7 @@
             }
 
             @include breakpoint(large up) {
+                max-width: 100%;
                 margin-bottom: 0;
             }
         }

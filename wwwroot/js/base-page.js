@@ -5,6 +5,15 @@ window.pixel.basePage = (function () {
 	    $(window).bind("scroll", function() {
 	        $("body").toggleClass("has-scrolled", $(document).scrollTop() > 0);
 	    });
+
+	    $(".scroll-link").click(function () {
+	        var target = $(this).data("target");
+	        var duration = $(this).data("duration");
+	        var headerHeight = $("header").outerHeight();
+	        $("html, body").animate({
+	            scrollTop: $(target).offset().top - headerHeight
+	        }, duration);
+	    });
     }
 
     return {

@@ -47,7 +47,9 @@ header {
         display: inline-block; }
       header a .icon {
         position: absolute !important; } }
-    header a:hover, header a:focus {
+    header a:focus {
+      color: #fefefe; }
+    header a:hover {
       color: #ffae00; }
   header .brand {
     text-transform: uppercase; }
@@ -164,6 +166,7 @@ footer {
       margin-bottom: 3.125rem; } }
   @media screen and (min-width: 64em) {
     .page.start-page .who-are-we img {
+      max-width: 100%;
       margin-bottom: 0; } }
 
 .page.start-page .who-are-we a {

@@ -4,14 +4,14 @@
             <div class="small-12 small-centered columns">
                 <h1>Vi är övertygade om att även små företag kan lyckas online. </h1>
                 <p>Vi hjälper er gärna hitta vägen med en välgenomtänkt och tydlig plan och sedan är resten hårt arbete. :)</p>
-                <a id="heroScrollDownLink" class="hollow button">Läs mer</a>
+                <a id="heroScrollDownLink" class="hollow button scroll-link" data-target="#whyPixel" data-duration="700">Läs mer</a>
             </div>
         </div>
     </div>
 
-    <section class="white why-pixel">
+    <section id="whyPixel" class="white why-pixel">
         <div class="row">
-            <div class="small-12 large-8 medium-centered column">
+            <div class="small-12 large-10 medium-centered column">
                 <h2>Varför Pixel Digitalbyrå?</h2>
                 <p class="lead">Vi kan hjälpa dig och ditt företag att ta nästa steg och lyckas med er närvaro på nätet. Vi är lyhörda och nyfikna på er vardag och guidar er att använda era resurser på bästa sätt. Vi finns i Halmstad men hjälper gärna kunder på hela Västkusten!</p>
                 <p>Dagens kunder gör allt mer research på egen hand innan de ska göra ett köp av en vara eller tjänst och denna research görs allt tidigare i köpprocessen. Tidigare kanske kunden besökte en butik och fick olika alternativ och sedan läste på hemma. Idag har kunden ofta redan bestämt sig för ett antal olika alternativ innan han eller hon ens valt en butik. Det gäller därför att ge kunden relevant information på nätet så att man blir den butik som kunden väljer att gå till för att göra sitt köp av varan, antingen i den fysiska butiken eller direkt på hemsidan.</p>
@@ -24,17 +24,17 @@
 
     <section class="gray who-are-we">
         <div class="row">
-            <div class="small-12 large-10 column end">
+            <div class="small-12 column">
                 <h2>Vilka är vi?</h2>
                 <p class="lead">Pixel Digitalbyrå drivs av Mikael och Christian Strid, två bröder med rötterna i Halmstad och vi har sysslat med webbutveckling i Halmstad som bisyssla sedan 1999 och sedan 2014 så arbetar Mikael heltid i bolaget.</p>
                 <p>I takt med att vi samlat på oss erfarenhet under åren, både från uppdrag som vi gjort inom ramen för Pixel Digitalbyrå men även från våra ordinarie anställningar, så känner vi att vi blivit allt mer trygga i att guida företag rätt på webben och idag anser vi oss vara en stabil och kunnig partner som kan ge konkreta och handfast råd till hur ett företag kan lyckas online.</p>
             </div>
         </div>
         <div class="row">
-            <div class="small-12 large-6 large-push-6 column">
-                <img class="float-center" src="~/images/portrait-dummy.jpg"/>
+            <div class="small-12 large-4 large-push-8 column">
+                <img class="float-center" src="~/images/mikael_600x600.jpg"/>
             </div>
-            <div class="small-12 large-6 large-pull-6 column">
+            <div class="small-12 large-8 large-pull-4 column">
                 <h3>Mikael Strid</h3>
                 <p class="lead">Hej, jag heter Mikael och arbetar idag heltid som frilansande IT-konsult i Pixel Digitalbyrå med Göteborg som hemmabas. Mina vanligaste uppdrag är som technical lead/lead developer/senior systemutvecklare i .NET-baserade webbprojekt.</p>
                 <p>De senaste åren har jag arbetat som IT-konsult med inriktning på webb och har utvecklat små och stora webbplatser på olika plattformar såsom Episerver, Wordpress och direkt på ASP.NET MVC. Jag har haft ansvaret för utvecklingsprocess och kvalitetssäkring i rollen som tech lead. Jag har även varit delaktig att hjälpa små och medelstora företag att ta fram strategier för att lyckas online.</p>
@@ -43,10 +43,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="small-12 large-6 column">
-                <img class="float-center" src="~/images/portrait-dummy.jpg"/>
+            <div class="small-12 large-4 column">
+                <img class="float-center" src="~/images/christian_600x600.jpg"/>
             </div>
-            <div class="small-12 large-6 column">
+            <div class="small-12 large-8 column">
                 <h3>Christian Strid</h3>
                 <p class="lead">Hej, jag heter Christian och jag arbetar idag heltid på en reklambyrå i Halmstad och är engagerad i Pixel Digitalbyrå på "kvällar och helger".</p>
                 <p>Mitt arbete på reklambyrå har gett mig stor erfarenhet av att hantera dialog med kunder och omsätta kundens idéer och grafiska riktlinjer till effektiv reklam. Jag har jobbat med allt från små, lokala kunder med mycket idéer men kanske inte små mycket riktlinjer till stora nationella kedjor där formatet redan är satt och det är viktigt att inget faller utanför ramarna.</p>
@@ -58,7 +58,7 @@
 
     <section class="how-we-do-it">
         <div class="row">
-            <div class="small-12 large-8 medium-centered column">
+            <div class="small-12 large-10 large-centered column">
                 <h2>Hur gör vi?</h2>
                 <p>Om vi ska vara riktigt ärliga så bygger vårt arbetssätt mest på så enkla saker som att lyssna, att använda sunt förnuft och sedan dra nytta av de erfarenheter vi samlat på oss genom åren.</p>
                 <p>Ska man vara lite mer formell så arbetat vi efter en enkel process:</p>
@@ -109,10 +109,3 @@
         </div>
     </section>
 </div>
-
-@section scripts {
-    <script src="~/js/start-page.js"></script>
-    <script>
-        window.pixel.startPage.init();
-    </script>
-}
