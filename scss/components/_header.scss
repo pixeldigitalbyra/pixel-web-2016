@@ -21,32 +21,13 @@ header {
     a {
         color: #fff;
 
-        &:hover {
+        &:hover, &:focus {
             color: $warning-color;
         }
     }
 
     .brand {
         text-transform: uppercase;
-    }
-
-    .contact-us {
-        position: relative;
-
-        .icon {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            fill: currentColor;
-            position: absolute;
-            top: rem-calc(2);
-            left: rem-calc(-18);
-
-            @include breakpoint(medium up) {
-                top: rem-calc(6);
-                left: rem-calc(-36);
-            }
-        }
     }
 }
 

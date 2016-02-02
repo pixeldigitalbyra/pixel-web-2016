@@ -32,6 +32,7 @@
 
             a {
                 @include button(false, $white, $white, $white, "hollow");
+                transition: border-color 0.25s ease-out, color 0.25s ease-out;
 
                 &:hover, &:focus {
                     color: $warning-color;
@@ -46,7 +47,7 @@
         padding-bottom: rem-calc(100);
 
         &.gray {
-            background-color: $light-gray;
+            background-color: #f8f8f8;
         }
     }
 
@@ -59,8 +60,27 @@
             border-radius: 50%;
             max-width: rem-calc(300);
         }
+
+        a {
+            color: $black;
+
+            &:hover, &:focus {
+                span {
+                    color: $warning-color;
+                }
+            }
+        }
     }
 
     .how-we-do-it {
+        ol {
+            li {
+                padding-left: rem-calc(10);
+
+                &:not(:last-child) {
+                    margin-bottom: rem-calc(20);
+                }
+            }
+        }
     }
 }

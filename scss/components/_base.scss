@@ -1,0 +1,21 @@
+﻿a.with-icon {
+    position: relative;
+    -moz-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    -webkit-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+
+    span {
+        padding-left: rem-calc(36);
+        line-height: rem-calc(24);
+    }
+
+    .icon {
+        position: absolute;
+        top: rem-calc(-2);
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        fill: currentColor;
+    }
+}
