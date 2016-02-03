@@ -15,9 +15,13 @@ a.with-icon {
     height: 1.5em;
     fill: currentColor; }
 
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  .row {
-    max-width: 43.75rem; } }
+.row {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+  @media screen and (min-width: 64em) {
+    .row {
+      padding-left: 0;
+      padding-right: 0; } }
 
 header {
   position: fixed;

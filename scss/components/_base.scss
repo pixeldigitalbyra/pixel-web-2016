@@ -23,7 +23,11 @@ a.with-icon {
 }
 
 .row {
-     @include breakpoint(medium only) {
-         max-width: rem-calc(700);
-     }
+    padding-left: rem-calc(15);
+    padding-right: rem-calc(15);
+
+    @include breakpoint(large up) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
